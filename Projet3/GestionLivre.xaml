@@ -1,0 +1,39 @@
+﻿<Window x:Class="Projet3.GestionLivre"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projet3"
+        mc:Ignorable="d"
+        Title="GestionLivre" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button x:Name="btn_Ajouter" Content="Ajouter" HorizontalAlignment="Left" Width="100" Margin="336,37,0,0" VerticalAlignment="Top"  Click="btn_Ajouter_Click"/>
+        <Button x:Name="Btn_Supprimer" Content="Supprimer" HorizontalAlignment="Left" Width="100"   Margin="336,78,0,0" VerticalAlignment="Top" Click="Btn_Supprimer_Click"/>
+        <Button x:Name="btn_Chercher" Content="Chercher" HorizontalAlignment="Left"  Width="100" Margin="336,118,0,0" VerticalAlignment="Top" Click="btn_Chercher_Click"/>
+        <Button x:Name="btn_Modifier" Content="Modifier" HorizontalAlignment="Left" Width="100"  Margin="336,152,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.413,0.002" Click="btn_Modifier_Click"/>
+        <TextBox x:Name="txt_titre"  Text="{Binding ElementName=datagrid_livre, Path=SelectedItem.titre}"  HorizontalAlignment="Left" Margin="112,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txt_auteur" Text="{Binding ElementName=datagrid_livre, Path=SelectedItem.Auteur}" HorizontalAlignment="Left" Margin="112,84,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txt_image"   Text="{Binding ElementName=datagrid_livre, Path=SelectedItem.URLimage}" HorizontalAlignment="Left" Margin="112,198,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cmb_nomCat" ItemsSource="{Binding CategoryNames}" HorizontalAlignment="Left" Margin="112,156,0,0" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Titre" HorizontalAlignment="Left" Margin="26,44,0,0" VerticalAlignment="Top"/>
+        <Label Content="Auteur" HorizontalAlignment="Left" Margin="26,80,0,0" VerticalAlignment="Top"/>
+        <Label Content="Disponible :" HorizontalAlignment="Left" Margin="16,114,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nom Categorie" HorizontalAlignment="Left" Margin="16,156,0,0" VerticalAlignment="Top"/>
+        <Label Content="Image" HorizontalAlignment="Left" Margin="26,194,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.553,6.28"/>
+        <DataGrid x:Name="datagrid_livre" ItemsSource="{Binding data}" Margin="0,307,10,10" SelectedCellsChanged="datagrid_livre_SelectedCellsChanged">
+            <DataGrid.Columns>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <RadioButton  x:Name="rd_non" Content="Non" HorizontalAlignment="Left" Margin="125,122,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rd_oui" Content="Oui" HorizontalAlignment="Left" Margin="257,120,0,0" VerticalAlignment="Top"/>
+        <Image x:Name="pictureBox" HorizontalAlignment="Left" Height="155" Margin="585,47,0,0" VerticalAlignment="Top" Width="167"/>
+        <Button x:Name="btn_Apload" Content="Apload" HorizontalAlignment="Left" Margin="645,222,0,0" VerticalAlignment="Top" Click="btn_Apload_Click" RenderTransformOrigin="0.764,2.204"/>
+        <TextBox x:Name="txt_prix"  Text="{Binding ElementName=datagrid_livre, Path=SelectedItem.prix}" HorizontalAlignment="Left" Margin="112,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txt_quantité" Text="{Binding ElementName=datagrid_livre, Path=SelectedItem.quantite}"  HorizontalAlignment="Left" Margin="112,275,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label Content="Prix" HorizontalAlignment="Left" Margin="26,245,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.553,1.812"/>
+        <Label Content="Quantité" HorizontalAlignment="Left" Margin="24,271,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.553,1.812"/>
+
+    </Grid>
+</Window>

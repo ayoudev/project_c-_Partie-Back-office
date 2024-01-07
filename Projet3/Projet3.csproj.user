@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Acceuil.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Connecter.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GestionAD.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GestionCAT.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GestionEmploye.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GestionLivre.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GestionRes.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Test.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Acceuil.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Connecter.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GestionAD.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GestionCAT.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GestionEmploye.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GestionLivre.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GestionRes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Test.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,22 @@
+﻿<Window x:Class="Projet3.GestionCAT"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projet3"
+        mc:Ignorable="d"
+        Title="GestionCAT" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btn_ajouter" Content="Ajouter" HorizontalAlignment="Left" Margin="400,81,0,0" VerticalAlignment="Top" Click="btn_ajouter_Click"/>
+        <Button x:Name="btn_supprimer" Content="Supprimer" HorizontalAlignment="Left" Margin="465,80,0,0" VerticalAlignment="Top" Click="btn_supprimer_Click"/>
+        <Button  x:Name="btn_chercher" Content="Chercher" HorizontalAlignment="Left" Margin="541,81,0,0" VerticalAlignment="Top" Click="btn_chercher_Click"/>
+        <Button  x:Name="btn_Modifier" Content="Modifier" HorizontalAlignment="Left" Margin="604,81,0,0" VerticalAlignment="Top" Click="btn_Modifier_Click"/>
+        <TextBox Text="{Binding ElementName=Data_Grid, Path=SelectedItem.Nom}" x:Name="txt_nom" HorizontalAlignment="Left" Margin="122,96,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <DataGrid x:Name="Data_Grid"  Margin="0,151,0,0" ItemsSource="{Binding data}">
+            <DataGrid.Columns>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="Nom" Content="Nom" HorizontalAlignment="Left" Margin="57,88,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
